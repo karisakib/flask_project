@@ -40,7 +40,7 @@ def home():
 def data():
     return scraper(url)
 
-@app.route('/data')
+@app.route('/form')
 def data():
     return render_template("form.html")
 
