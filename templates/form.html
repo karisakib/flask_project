@@ -17,9 +17,19 @@
         <li><a href="{{ url_for('form') }}">data</a></li>
       </ul>
     </nav>
+    <form action="/register" method="POST">
+      First Name: <input type="text" name="first_name">
+      Last Name: <input type="text" name="last_name">
+      Email: <input type="email" name="email">
+      Phone: <input type="number" name="phone">
+      <input type="submit" value="register">
+    </form>
     <section class="content">
     {% block content %}
-    {{fun_fact}}
+    {{ first_name }}
+    {{ last_name }}
+    {{ email }}
+    {{ phone }}
     {% endblock %}
     </section>
 </body>
